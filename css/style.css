@@ -2,20 +2,38 @@ h2
 {
   font-size: larger;
   font-weight: bold;
+  text-align: center;
+  text-decoration: underline;
+  margin-bottom: 10px;
 }
 section, article
 {
-margin:10px;
+margin:0px 75px 25px;
 padding: 5px;
 }
+
+ul
+{
+list-style-type: square;
+padding-left: 25px;
+}
+
+p
+{
+  width: 60%;
+}
+
 #header
 {
   height:80px;
-  background-image: url("../img/bannerGradienta.jpg");
-  background-color: lightgray;
-  background-origin: content-box;
-  background-repeat: no-repeat;
-  background-size: 90%;
+  /* background-image: url("../img/bannerGradienta.jpg"); */
+  /* background-origin: content-box; */
+  /* background-repeat: no-repeat; */
+  /* background-size: 90%; */
+  background-image: linear-gradient(to bottom right, blue,white);
+  position:fixed;
+  top:0;
+  width:100%;
 }
 
 
@@ -36,36 +54,39 @@ padding: 5px;
   background-image: url("../img/brickWall.jpg");
   background-color: aqua;
   background-size: cover;
+  margin-top: 80px;
   
 }
 
 #welcomeMsg
 {
+  padding-top: 10px;
+  font-family: monospace;
   text-align: center;
-  color: red;
+  color: orangered;
 }
 
 #shortBio
 {
-  border: 3px solid green ;
+
 }
 
 #bioHead
 {
-  text-align: center;
+
 }
 #eduHistory
 {
-  border: 3px solid red ;
+
 
 }
 
 #jobExp
 {
-  border: 3px solid purple;
+
 }
 
 #goals
 {
-  border: 3px solid orange;
+
 }
