@@ -1,0 +1,71 @@
+h2
+{
+  font-size: larger;
+  font-weight: bold;
+}
+section, article
+{
+margin:10px;
+padding: 5px;
+}
+#header
+{
+  height:80px;
+  background-image: url("../img/bannerGradienta.jpg");
+  background-color: lightgray;
+  background-origin: content-box;
+  background-repeat: no-repeat;
+  background-size: 90%;
+}
+
+
+#headH1
+{
+  text-align: center;
+  color: blue;
+  padding-top: 20px;
+  padding-bottom:20px;
+  font-size: 2.5em;
+  font-weight: bold;
+
+}
+
+#mainBody
+{
+  height:100vh;
+  background-image: url("../img/brickWall.jpg");
+  background-color: aqua;
+  background-size: cover;
+  
+}
+
+#welcomeMsg
+{
+  text-align: center;
+  color: red;
+}
+
+#shortBio
+{
+  border: 3px solid green ;
+}
+
+#bioHead
+{
+  text-align: center;
+}
+#eduHistory
+{
+  border: 3px solid red ;
+
+}
+
+#jobExp
+{
+  border: 3px solid purple;
+}
+
+#goals
+{
+  border: 3px solid orange;
+}
