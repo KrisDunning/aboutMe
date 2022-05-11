@@ -18,6 +18,8 @@ let questionSevenAnswerArr=['wisconsin','alaska','new york','washington'];
 
 let userAnswerArr=[];
 let score=0;
+console.log(questionArr[5][1].toString()); // console log correct random number for testing
+
 let userName=prompt('Hello! May I please ask your name? ');
 
 for (let i=0; i<questionArr.length;i++)
@@ -57,10 +59,16 @@ for (let i=0; i<questionArr.length;i++)
       }
       else
       {
-        alert(`Sorry but thats incorrect. ${3-j} guesses left`);
+        if(userAnswerArr[userAnswerArr.length-1]<questionArr[i][1].toString()) //if guess is too low or high respond accordingly
+        {
+          alert(`Sorry but thats too low. ${3-j} guesses left`);
+        }
+        else
+        {
+          alert(`Sorry but thats too high. ${3-j} guesses left`);
+        }
       }
     }
-    //break or continue? want to skip rest of for loop code and move on to question 7(index6)
   }
   if(i<5)
   {
@@ -117,4 +125,4 @@ alert(`Congratulations on completing my little quiz. You got ${score} answers co
 // let userName=prompt('Hello! May I please ask your name? ');
 
 
-document.getElementById('userNameLocation').innerHTML= `Welcome ${userName}, Please feel free to learn more about me below.`;
+document.getElementById('userNameLocation').innerHTML= `Welcome ${userName}, Congrats on getting ${score} answers correct. Please feel free to learn more about me below.`;
