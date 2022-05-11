@@ -34,7 +34,7 @@ for (let i=0; i<questionArr.length;i++)
         if(userAnswerArr[userAnswerArr.length-1].toLowerCase()===questionSevenAnswerArr[z])
         {
           score++;
-          alert('WOW! You got it! Nice Job!');
+          alert(`WOW! You got it! Nice Job! Here are all the possible answers ${questionSevenAnswerArr}`);
           k=6; //set k so i can break out of that loop as well since the answer was correct.
           break;
         }
@@ -42,6 +42,10 @@ for (let i=0; i<questionArr.length;i++)
       if (k<6)
       {
         alert(`Sorry but thats incorrect. ${5-k} guesses left`);
+      }
+      if(5-k===0)
+      {
+        alert(`Here are all the possible answers: ${questionSevenAnswerArr}.`);
       }
     }
   }
@@ -86,43 +90,7 @@ for (let i=0; i<questionArr.length;i++)
 }
 
 alert(`Congratulations on completing my little quiz. You got ${score} answers correct.`);
+console.table(userAnswerArr);
 
-// let answerOne= prompt('Do I live in Washington State? (Yes or No?)').toLowerCase();
-// if (answerOne==='y' || answerOne==='yes'){
-//   alert(responseCorrect[Math.floor(Math.random()*responseCorrect.length)]);
-// }else{
-//   alert(responseWrong[Math.floor(Math.random()*responseWrong.length)]);
-// }
-
-// let answerTwo= prompt('Did I serve in the Coast Guard? (Yes or No?)').toLowerCase();
-// if (answerTwo==='n' || answerTwo==='no'){
-//   alert(responseCorrect[Math.floor(Math.random()*responseCorrect.length)]);
-// }else{
-//   alert(responseWrong[Math.floor(Math.random()*responseWrong.length)]);
-// }
-
-// let answerThree= prompt('Have I ever traveled outside of the United States? (Yes or No?)').toLowerCase();
-// if (answerThree==='y' || answerThree==='yes'){
-//   alert(responseCorrect[Math.floor(Math.random()*responseCorrect.length)]);
-// }else{
-//   alert(responseWrong[Math.floor(Math.random()*responseWrong.length)]);
-// }
-
-// let answerFour= prompt('Am I a fan of the Green Bay Packers? (Yes or No?)').toLowerCase();
-// if (answerFour==='y' || answerFour==='yes'){
-//   alert(responseCorrect[Math.floor(Math.random()*responseCorrect.length)]);
-// }else{
-//   alert(responseWrong[Math.floor(Math.random()*responseWrong.length)]);
-// }
-
-// let answerFive= prompt('Do I own a motorcycle? (Yes or No?)').toLowerCase();
-// if (answerFive==='n' || answerFive==='no'){
-//   alert(responseCorrect[Math.floor(Math.random()*responseCorrect.length)]);
-// }else{
-//   alert(responseWrong[Math.floor(Math.random()*responseWrong.length)]);
-// }
-
-// let userName=prompt('Hello! May I please ask your name? ');
-
-
-document.getElementById('userNameLocation').innerHTML= `Welcome ${userName}, Congrats on getting ${score} answers correct. Please feel free to learn more about me below.`;
+document.getElementById('userNameLocation').innerHTML= `Welcome ${userName}, Congrats on getting ${score} answers correct.
+ Please feel free to learn more about me below.`;
