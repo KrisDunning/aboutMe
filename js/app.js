@@ -11,7 +11,7 @@ let questionArr=[['Do I live in Washington State? (Yes or No?)','y','yes'],
   ['Have I ever traveled outside of the United States? (Yes or No?)','y','yes'],
   ['Am I a fan of the Green Bay Packers? (Yes or No?)','y','yes'],
   ['Do I own a motorcycle? (Yes or No?)','n','no'],
-  ['Please guess a number I\'m thinking of (1-10). (4 tries) :',Math.floor(Math.random()*9)+1],
+  ['Please guess a number I\'m thinking of (1-10). (4 tries) :', Math.floor(Math.random()*9)+1],
   'Which state have I lived in for at least one year? (6 tries, more than 1 correct answer)'];
 
 let questionSevenAnswerArr=['wisconsin','alaska','new york','washington'];
@@ -20,39 +20,64 @@ let userAnswerArr=[];
 let score=0;
 let userName=prompt('Hello! May I please ask your name? ');
 
-for (let i=0; i<questionArr.length-1;i++)
+for (let i=0; i<questionArr.length;i++)
 {
-  if (i===questionArr.length-1)
+  if (i===questionArr.length-1) //Question 7: multiple correct answer question i=6
   {
-    
+    for (let k=0;k<6;k++)
+    {
+      userAnswerArr.push(prompt(questionArr[i]));
+      for(let z=0;z<questionSevenAnswerArr.length;z++)
+      {
+        if(userAnswerArr[userAnswerArr.length-1].toLowerCase()===questionSevenAnswerArr[z])
+        {
+          score++;
+          alert('WOW! You got it! Nice Job!');
+          k=6; //set k so i can break out of that loop as well since the answer was correct.
+          break;
+        }
+      }
+      if (k<6)
+      {
+        alert(`Sorry but thats incorrect. ${5-k} guesses left`);
+      }
+    }
   }
 
-  if(i===questionArr.length-2) //number guess question
+  if(i===questionArr.length-2) //Question 6:number guess question i=5
   {
     for (let j=0; j<4;j++)
     {
-      userAnswerArr[i][j]=prompt(questionArr[i][0]);
-      if(userAnswerArr[i][j]===questionArr[i][1].toString())
+      userAnswerArr.push(prompt(questionArr[i][0]));
+      if(userAnswerArr[userAnswerArr.length-1]===questionArr[i][1].toString())
       {
         score++;
         alert(responseCorrect[Math.floor(Math.random()*responseCorrect.length)]);
+        j=4;
       }
       else
       {
-        alert('Sorry! Please guess another number (1-10)');
+        alert(`Sorry but thats incorrect. ${3-j} guesses left`);
       }
     }
-    continue; //break or continue? want to skip rest of for loop code and move on to question 7(index6)
+    //break or continue? want to skip rest of for loop code and move on to question 7(index6)
   }
-
-  userAnswerArr[i]=prompt(questionArr[i][0]);
-  if (userAnswerArr[i].toLowerCase()===questionArr[i][1]|| userAnswerArr[i].toLowerCase()===questionArr[i][2])
+  if(i<5)
   {
-    score++;
-    alert(responseCorrect[Math.floor(Math.random()*responseCorrect.length)]);
+    userAnswerArr.push(prompt(questionArr[i][0]));//first 5 questions
+    if (userAnswerArr[i].toLowerCase()===questionArr[i][1]|| userAnswerArr[i].toLowerCase()===questionArr[i][2])
+    {
+      score++;
+      alert(responseCorrect[Math.floor(Math.random()*responseCorrect.length)]);
+    }
+    else
+    {
+      alert(responseWrong[Math.floor(Math.random()*responseWrong.length)]);
+    }
   }
-
 }
+
+alert(`Congratulations on completing my little quiz. You got ${score} answers correct.`);
 
 // let answerOne= prompt('Do I live in Washington State? (Yes or No?)').toLowerCase();
 // if (answerOne==='y' || answerOne==='yes'){
@@ -92,9 +117,4 @@ for (let i=0; i<questionArr.length-1;i++)
 // let userName=prompt('Hello! May I please ask your name? ');
 
 
-
-
-
-
-
-document.getElementById('userNameLocation').innerHTML=`Welcome ${userName}, Please feel free to learn more about me below.`;
+document.getElementById('userNameLocation').innerHTML= `Welcome ${userName}, Please feel free to learn more about me below.`;
