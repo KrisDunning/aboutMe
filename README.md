@@ -10,8 +10,10 @@ I build an app with a direct and powerful purpose. It does all of the things tha
 
 submission PR
 
+## Attributions
+
 [Meyers CSS Reset](https://meyerweb.com/eric/tools/css/reset/)  
-Banner image attribution- Photo by Gradienta on [Unsplash](https://unsplash.com/)
+<!-- Banner image attribution- Photo by Gradienta on [Unsplash](https://unsplash.com/) -->
 Body background image attribution- Photo by Joe Woods on [Unsplash](https://unsplash.com/)
 
 ### Reflections and Comments

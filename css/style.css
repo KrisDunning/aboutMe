@@ -8,8 +8,9 @@ h2
 }
 section, article
 {
-  margin:0px 75px 25px;
+  margin:0px auto 15px auto;
   padding: 5px;
+  max-width: 50%;
 }
 
 ul
@@ -18,17 +19,23 @@ ul
   padding-left: 25px;
 }
 
-p
+li
 {
-  width: 60%;
+  margin:5px;
+}
+
+ol
+{
+  list-style-type:upper-roman;
+}
+
+ul ul 
+{
+  list-style-type: disc;
 }
 
 #header
 {
-  /* background-image: url("../img/bannerGradienta.jpg"); */
-  /* background-origin: content-box; */
-  /* background-repeat: no-repeat; */
-  /* background-size: 90%; */
   height:80px;
   background-image: linear-gradient(to bottom right, blue,white);
   position:fixed;
@@ -48,7 +55,7 @@ p
 
 #mainBody
 {
-  height:100vh;
+  height:auto;
   background-image: url("../img/brickWall.jpg");
   background-color: aqua;
   background-size: cover;
@@ -58,8 +65,11 @@ p
 
 #welcomeMsg
 {
-  padding-top: 10px;
+  margin: 0px auto 20px;
+  padding: 10px 5px;
   font-family: monospace;
+  font-weight: 500;
+  font-size: 1.25em;
   text-align: center;
   color: orangered;
 }
