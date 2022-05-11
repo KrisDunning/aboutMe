@@ -8,14 +8,14 @@ h2
 }
 section, article
 {
-margin:0px 75px 25px;
-padding: 5px;
+  margin:0px 75px 25px;
+  padding: 5px;
 }
 
 ul
 {
-list-style-type: square;
-padding-left: 25px;
+  list-style-type: square;
+  padding-left: 25px;
 }
 
 p
@@ -25,17 +25,16 @@ p
 
 #header
 {
-  height:80px;
   /* background-image: url("../img/bannerGradienta.jpg"); */
   /* background-origin: content-box; */
   /* background-repeat: no-repeat; */
   /* background-size: 90%; */
+  height:80px;
   background-image: linear-gradient(to bottom right, blue,white);
   position:fixed;
   top:0;
   width:100%;
 }
-
 
 #headH1
 {
@@ -45,7 +44,6 @@ p
   padding-bottom:20px;
   font-size: 2.5em;
   font-weight: bold;
-
 }
 
 #mainBody
@@ -66,7 +64,7 @@ p
   color: orangered;
 }
 
-#shortBio
+/* #shortBio
 {
 
 }
@@ -89,4 +87,4 @@ p
 #goals
 {
 
-}
+} */
