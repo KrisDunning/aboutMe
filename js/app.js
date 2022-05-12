@@ -49,20 +49,19 @@ function guessingGame(){
     {
       for (let j = 0; j < 4; j++) {
         userAnswerArr.push(prompt(questionArr[i][0]));
-        if (userAnswerArr[userAnswerArr.length - 1] === questionArr[i][1].toString()) {
+        if (+userAnswerArr[userAnswerArr.length - 1] === questionArr[i][1]) {
           score++;
           alert(responseCorrect[Math.floor(Math.random() * responseCorrect.length)]);
           j = 4;
         }
-        else {
-          if (userAnswerArr[userAnswerArr.length - 1] < questionArr[i][1].toString()) //if guess is too low or high respond accordingly
-          {
-            alert(`Sorry but thats too low. ${3 - j} guesses left`);
-          }
-          else {
-            alert(`Sorry but thats too high. ${3 - j} guesses left`);
-          }
+        else if (+userAnswerArr[userAnswerArr.length - 1] < questionArr[i][1]) //if guess is too low or high respond accordingly
+        {
+          alert(`Sorry but thats too low. ${3 - j} guesses left`);
         }
+        else {
+          alert(`Sorry but thats too high. ${3 - j} guesses left`);
+        }
+
       }
     }
     if (i < 5) {
