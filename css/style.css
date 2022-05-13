@@ -37,7 +37,7 @@ ul ul
 
 #header
 {
-  height:80px;
+  height:10vh;
   background-image: linear-gradient(to bottom right, blue,white);
   position:fixed;
   top:0;
@@ -48,10 +48,11 @@ ul ul
 {
   text-align: center;
   color: blue;
-  padding-top: 20px;
-  padding-bottom:20px;
+  padding-top: 2vh;
+  padding-bottom:2vh;
   font-size: 2.5em;
   font-weight: bold;
+  max-height:fit-content;
 }
 
 #mainBody
@@ -60,7 +61,7 @@ ul ul
   background-image: url("../img/brickWall.jpg");
   background-color: aqua;
   background-size: cover;
-  margin-top: 80px;
+  margin-top: 10vh;
   
 }
 
