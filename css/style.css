@@ -1,3 +1,6 @@
+*{
+  scroll-behavior: smooth;
+}
 h2
 {
   font-size: larger;
@@ -8,7 +11,7 @@ h2
 }
 section, article
 {
-  margin:0px auto 15px auto;
+  margin:0px auto 300px auto;
   padding: 5px;
   max-width: 50%;
 }
@@ -42,6 +45,7 @@ ul ul
   position:fixed;
   top:0;
   width:100%;
+  z-index: 2;
 }
 
 #headH1
@@ -76,27 +80,93 @@ ul ul
   color: orangered;
 }
 
-/* #shortBio
-{
-
+#hs_img{
+  position: absolute;  
+  top:30px;
+  left:-250px;
+  width: 200px;
+  height: 200px;
+  border-radius: 25%;
+  border:3px solid navy;
 }
 
-#bioHead
-{
-
+#dog_img{
+  position: absolute;  
+  top:30px;
+  left:-250px;
+  width: 200px;
+  height: 200px;
+  border-radius: 25%;
+  border:3px solid navy;
 }
+
+#construction_img{
+  position: absolute;  
+  top:30px;
+  left:-250px;
+  width: 200px;
+  height: 200px;
+  border-radius: 25%;
+  border:3px solid navy;
+}
+
+#clipboard_img{
+  position: absolute;  
+  top:30px;
+  left:-250px;
+  width: 200px;
+  height: 200px;
+  border-radius: 25%;
+  border:3px solid navy;
+}
+
+#moviereel_img{
+  position: absolute;  
+  top:30px;
+  left:-250px;
+  width: 200px;
+  height: 200px;
+  border-radius: 25%;
+  border:3px solid navy;
+}
+
+#shortBio
+{
+  position:relative;
+}
+
 #eduHistory
 {
-
-
+position: relative;
 }
 
 #jobExp
 {
-
+  position: relative;
 }
 
 #goals
 {
+position: relative;
+}
 
-} */
+#topTen{
+  position:relative;
+  margin-bottom: 0px;
+}
+
+#topTen a:visited{
+  color:crimson;
+}
+
+#topTen a:hover{
+  border: 3px dotted navy;
+}
+
+#backToTop{
+  position: absolute;
+  left: 600px;
+  width:fit-content;
+  
+}
+

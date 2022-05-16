@@ -4,7 +4,6 @@ let userAnswerArr = [];
 let score = 0;
 let userName = '';
 let correctNumber = Math.floor(Math.random() * 9) + 1;
-console.log(correctNumber);// for testing
 
 function getUserName() {
   return prompt('Hello! May I please ask your name? ');
@@ -41,10 +40,6 @@ function questionSix(index, guessCount, maxGuess) {
 function questionSeven(index, guessCount, maxGuess) {
   userAnswerArr.push(prompt(getQuestionOrAnswer(index, 0)));
   let possibleAnswers = getQuestionOrAnswer(index, 1);
-  // console.table(possibleAnswers);
-  console.log(possibleAnswers);
-  console.log(possibleAnswers.includes((userAnswerArr[userAnswerArr.length - 1]).toLowerCase()));
-
   if (possibleAnswers.includes((userAnswerArr[userAnswerArr.length - 1]).toLowerCase()) === true) {
     score++;
     alert(`WOW! You got it! Nice Job! Here are all the possible answers: ${getQuestionOrAnswer(index, 1)}`);
@@ -84,16 +79,12 @@ function getQuestionOrAnswer(index, subindex) {
 }
 
 function gameComplete() {
-  console.table(userAnswerArr);//displayed for testing
   alert(`Congratulations on completing my little quiz. You got ${score} answers correct.`);
-  document.getElementById('userNameLocation').innerHTML = `Welcome ${userName}, Congrats on getting ${score} answers correct.
-  Please feel free to learn more about me below.`;
+  document.getElementById('userNameLocation').innerHTML = `Welcome ${userName}, Congrats on getting ${score} answers correct. Please feel free to learn more about me below.`;
 }
 
 function guessingGame() {
-
   userName = getUserName();
-
   for (let i = 0; i < 7; i++) {
     if (i < 5) {
       questionsUpToFive(i);

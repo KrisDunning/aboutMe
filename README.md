@@ -15,6 +15,11 @@ submission PR
 [Meyers CSS Reset](https://meyerweb.com/eric/tools/css/reset/)  
 <!-- Banner image attribution- Photo by Gradienta on [Unsplash](https://unsplash.com/) -->
 Body background image attribution- Photo by Joe Woods on [Unsplash](https://unsplash.com/)
+Dog Studying Photo- Photo by Cookie the Pom on Unsplash
+Construction Worker Photo- Photo by hector-emilio-gonzalez-unsplash.
+Clipboard Photo- Photo by Markus Winkler on Unsplash
+8mm Reel Photo- Photo by Denise Jans on Unsplash
+
 
 ### Reflections and Comments
 
